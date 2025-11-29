@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPO法人 就労継続支援B型 輝き - Welcome</title>
+ 
+  <style>
+    /* 全体的なリセットとフォント設定 */
+    body {
+      font-family: 'Arial', 'Meiryo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9; /* わずかに青みがかった白 */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* メインコンテナ */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* タイトルセクション */
+    .title-container {
+      text-align: center;
+      padding: 40px 0 20px 0;
+      border-bottom: 5px solid #4CAF50; /* 鮮やかな緑のライン */
+      margin-bottom: 30px;
+    }
+
+    .main-title {
+      font-size: 2.5em;
+      color: #4CAF50; /* メインカラー（緑） */
+      border: 3px solid #4CAF50;
+      display: inline-block;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      background-color: #e8f5e9; /* 薄い緑の背景 */
+    }
+   
+    .subtitle-text {
+      color: darkblue;
+      font-size: 1.5em;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* スローガン/モットー */
+    .motto-container {
+      text-align: center;
+      padding: 30px;
+      background-color: #e0f7fa; /* 水色の背景 */
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border: 1px solid #00bcd4;
+    }
+   
+    .motto-container h1 {
+      color: #00838f; /* 濃い水色 */
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* 一般的なセクション */
+    .section {
+      padding: 20px;
+      margin-bottom: 30px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .section-title {
+      color: #D2691E; /* シエナ（落ち着いた茶色） */
+      border-left: 5px solid #D2691E;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* 作業内容/サービス対象者などのリストスタイル */
+    .work-list p {
+      border: 1px solid #90EE90; /* 薄い緑の枠線 */
+      border-radius: 5px;
+      padding: 8px;
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      color: #555;
+      background-color: #F0FFF0; /* わずかに緑がかった白 */
+    }
+   
+    .highlight-text {
+      color: #4CAF50;
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    /* 1日の流れ */
+    .schedule-item {
+      color: #555;
+      padding: 5px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+   
+    .schedule-item:last-child {
+      border-bottom: none;
+    }
+   
+    .schedule-note {
+      color: #4CAF50;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    /* 画像コンテナ */
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .image-container img {
+      width: 48%; /* 2枚並べる場合 */
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+   
+    /* イベント */
+    .event-section {
+        position: relative;
+        text-align: center;
+    }
+
+    .event-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒で文字を見やすく */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1em;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+   
+    .event-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+   
+    /* 連絡先/地図 */
+    .contact-info {
+        background-color: #fff3e0; /* 薄いオレンジの背景 */
+        border: 1px solid #ff9800;
+        padding: 20px;
+        border-radius: 8px;
+    }
+   
+    .contact-info h4 {
+        color: #ff9800;
+        border-bottom: 1px solid #ff9800;
+        padding-bottom: 5px;
+        margin-top: 20px;
+    }
+   
+    .map-container, .qrcode-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+   
+    .map-image {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+
+    /* その他の修正 */
+    #overlay { display: none; } /* 不要なオーバーレイは非表示に */
+   
+  </style>
+</head>
+<body>
+<div class="container">
+   
+    <div class="title-container">
+        <img src="placeholder-top.jpg" id="yourImageId" alt="施設のイメージ画像" style="width: 100%; max-width: 700px; height: auto; border-radius: 5px;">
+       
+        <h1 class="main-title">NPO法人 就労継続支援B型 輝き</h1>
+        <div class="subtitle-text">心に愛、優しさ、光を</div>
+    </div>
+  
+    <div class="motto-container">
+        <h1>支援目標</h1>
+        <p>就労継続支援事業所 輝きでは、年齢や体力などの面で雇用契約を結んで働くことが困難なかたが、軽作業などの**就労訓練を行うことができる福祉施設サービス**です。</p>
+        <p>1日の作業スケジュールを**利用者様の体調や体力に合わせて支援**します。また、作業の時間だけでなく、食事や休憩などもしっかりと調整し、支援致します。</p>
+        <p class="highlight-text">「心に愛を、心に優しさを、心に光を」をモットーに、皆様と輝きながらサポート致します。</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">✨ 作業内容</h2>
+        <div class="work-list">
+            <p>委託業務 (ラベル貼りなど)</p>
+            <p>農作業</p>
+            <p>ビーズアクセサリーづくり</p>
+            <p>縫い物</p>
+        </div>
+        <p class="highlight-text">仲間との楽しい作業です。</p>
+    </div>
+   
+    <div class="section">
+        <p>私たちは活動を通して、個々の気持ちを尊重し、感情、動作、そして**輝きを持っていただけるように**育んでまいります。</p>
+
+        <h3 class="section-title">🗓️ 1日の流れ</h3>
+        <div class="schedule-item">9:00〜頃&emsp;出発（お迎え）</div>
+        <div class="schedule-item">10:00&emsp;健康チェック・作業開始</div>
+        <div class="schedule-item">12:00&emsp;昼食</div>
+        <div class="schedule-item">13:00&emsp;作業</div>
+        <div class="schedule-item">15:00&emsp;帰宅（お送り）</div>
+        <p class="schedule-note">※ 個別の支援計画に応じて時間は変わります</p>
+    </div>
+
+    <div class="section">
+        <p>綺麗、楽しい、明るいが揃った事業所です。</p>
+        <div class="image-container">
+            <img src="placeholder-work1.jpg" alt="作業の様子1">
+            <img src="placeholder-work2.jpg" alt="作業の様子2">
+        </div>
+       
+        <p>イベントや行事を通して、多くの人との交流や社会とのつながりを持てる場になるように支援していきます。（都合によりできない場合がございます）</p>
+
+        <h3 class="section-title">🎉 行事の種類</h3>
+        <div class="event-section">
+            <img src="placeholder-event.jpg" alt="イベントの様子">
+            <div class="event-text">
+                **＜年間行事＞**
+                <p>BBQ / 新年会 / ひな祭り / お花見 / 四季の野菜収穫祭 / 七夕祭り / クリスマス会</p>
+            </div>
+        </div>
+    </div>
+   
+    <div class="section contact-info">
+        <h4 class="section-title">🤝 サービス対象者</h4>
+        <ul>
+            <li>障害者（知的障害、精神障害をお持ちの方）</li>
+            <li>一般企業に雇用されることが困難な方（年齢、体力などの面で）</li>
+            <li>就労移行支援を利用した結果、就労継続支援事業の利用が適当と判断された方</li>
+        </ul>
+       
+        <h4 class="section-title">📍 サービス提供地域</h4>
+        <p>飯塚市、桂川町、田川市、田川郡、直方市、宮若市</p>
+       
+        <h4 class="section-title">💰 工賃</h4>
+        <p>作業能率に応じて、**時給 150円から**お支払いします。なお、6ヶ月おきに作業能力により見直します。</p>
+       
+        <h4 class="section-title">🕓 サービス提供時間</h4>
+        <p>毎週月曜日から金曜日 午前10時〜午後3時</p>
+        <p>休日: 土曜日、日曜日、お盆、年末年始（詳しくは毎月のスケジュール表をご覧ください）</p>
+       
+        <h4 class="section-title">➕ その他サービス</h4>
+        <p>希望される全ての方に**送迎**の対応ができます。</p>
+        <p>昼食はすべて**手作り**で、個々の嗜好にも配慮しています。</p>
+    </div>
+   
+    <div class="section contact-info">
+        <h4 style="color: red; border-color: red;">✉️ お問い合わせ・ご相談・見学のお申し込みはこちら</h4>
+        <p>〒820-0033 福岡県飯塚市立岩1077-168</p>
+        <p>TEL: 0948-25-4795</p>
+        <p>Email: kagayaki@uma.bbiq.jp</p>
+
+        <div class="qrcode-container">
+            <p>【お問い合わせ用 QRコード】</p>
+            </div>
+
+        <div class="map-container">
+            <p>【アクセス地図】</p>
+            <img class="map-image" src="placeholder-map.jpg" alt="施設の所在地を示す地図">
+        </div>
+    </div>
+   
+</div>
+</body>
+</html>
+ 
